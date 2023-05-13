@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy bird game</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body class="min-h-screen bg-slate-600 overflow-hidden">
+    <div id="obstacle1" class="obstacle"></div>
+    <div id="obstacle2" class="obstacle"></div>
+    <div id="bird"></div>
+    <div class="score">Pontuação: <span id="score">0</span></div>
+
+    <!-- <dialog id="modal" class="flex flex-col gap-8 rounded">
+      <h1 class="text-5xl font-bold">Fim de jogo</h1>
+
+      <button class="btn btn-primary" id="play-again">Jogar novamente</button>
+      <button class="btn btn-outline btn-secondary" id="cancel">
+        Cancelar
+      </button>
+    </dialog> -->
+
+    <dialog id="modal">
+      <div class="flex flex-col gap-8 rounded">
+        <h1 class="text-5xl font-bold">Fim de jogo</h1>
+
+        <button class="btn btn-primary" id="play-again">Jogar novamente</button>
+        <button class="btn btn-outline btn-secondary" id="cancel">
+          Cancelar
+        </button>
+      </div>
+    </dialog>
+
+    <!-- <div class="score">
+      <div id="player-score">0</div>
+      <div id="computer-score">0</div>
+    </div>
+    <div class="ball" id="ball"></div>
+    <div class="paddle left !h-96" id="player-paddle"></div>
+    <div class="paddle right" id="computer-paddle"></div> -->
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
