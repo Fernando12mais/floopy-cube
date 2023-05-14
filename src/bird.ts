@@ -15,6 +15,13 @@ export default class Bird {
       this.isJumping = false;
     });
 
+    document.addEventListener("touchstart", () => {
+      this.isJumping = true;
+    });
+    document.addEventListener("touchend", () => {
+      this.isJumping = false;
+    });
+
     document.addEventListener("keydown", () => {
       this.isJumping = true;
     });
