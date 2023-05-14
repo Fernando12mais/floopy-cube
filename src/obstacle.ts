@@ -39,6 +39,6 @@ export default class Obstacle {
   update() {
     this.x -= this.velocity;
 
-    this.velocity += 0.0001;
+    if (this.velocity < 1) this.velocity += 0.001;
   }
 }

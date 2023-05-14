@@ -9,11 +9,11 @@
 
     top: calc(var(--y) * 1%);
     left: calc(var(--x) * 1%);
-    @apply w-8 h-8 rounded bg-blue-400 absolute;
+    @apply lg:w-8  lg:h-8  w-6 h-6 rounded bg-blue-400 absolute;
   }
 
   .obstacle {
-    @apply bg-emerald-400 absolute  w-8 h-52 -translate-x-full;
+    @apply bg-emerald-400 absolute  lg:w-8 h-52 w-6  -translate-x-full;
   }
 
   #obstacle1 {
