@@ -53,7 +53,7 @@ export default class Bird {
     if (!this.isJumping) {
       this.y += this.gravity;
     } else {
-      this.y -= 0.5;
+      this.y -= 0.7;
     }
 
     if (this.y <= 0) {
