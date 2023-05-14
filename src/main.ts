@@ -11,6 +11,13 @@ const playAgainButton = document.querySelector(
 
 const cancelButton = document.querySelector("#cancel") as HTMLButtonElement;
 
+const startButton = document.querySelector("#start") as HTMLButtonElement;
+
+startButton.addEventListener("click", () => {
+  window.requestAnimationFrame(update);
+  modalStart.close();
+});
+
 playAgainButton.addEventListener("click", () => {
   gameOver = false;
   bird.reset();
@@ -20,6 +27,7 @@ playAgainButton.addEventListener("click", () => {
   window.requestAnimationFrame(update);
 
   score.innerText = "0";
+  setObstaclesHeights();
 });
 cancelButton.addEventListener("click", () => {
   modal.close();
@@ -34,6 +42,10 @@ const obstacle2 = new Obstacle(
 );
 
 const modal = document.querySelector("#modal") as HTMLDialogElement;
+
+const modalStart = document.querySelector("#modal-start") as HTMLDialogElement;
+
+modalStart.showModal();
 
 setObstaclesHeights();
 
@@ -68,8 +80,6 @@ function update() {
 
   window.requestAnimationFrame(update);
 }
-
-window.requestAnimationFrame(update);
 
 const test = { height1: 0, height2: 0, total: 100, gap: 10 };
 

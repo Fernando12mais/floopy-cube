@@ -15,16 +15,12 @@ export default class Bird {
       this.isJumping = false;
     });
 
-    document.addEventListener("keydown", ({ code }) => {
-      if (code === "Space") {
-        this.isJumping = true;
-      }
+    document.addEventListener("keydown", () => {
+      this.isJumping = true;
     });
 
-    document.addEventListener("keyup", ({ code }) => {
-      if (code === "Space") {
-        this.isJumping = false;
-      }
+    document.addEventListener("keyup", () => {
+      this.isJumping = false;
     });
     this.reset();
   }
@@ -51,6 +47,10 @@ export default class Bird {
       this.y += this.gravity;
     } else {
       this.y -= this.gravity * 2;
+    }
+
+    if (this.y <= 0) {
+      this.y = 0;
     }
   }
 }

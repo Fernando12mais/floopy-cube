@@ -30,6 +30,7 @@ export default class Obstacle {
 
   reset() {
     this.x = 100;
+    this.velocity = 0.5;
   }
 
   update() {
