@@ -81,9 +81,6 @@ function update() {
   window.requestAnimationFrame(update);
 }
 
-const test = { height1: 0, height2: 0, total: 100, gap: 10 };
-
-console.log(test);
 function randomNumberBetween(min: number, max: number) {
   return Math.random() * (max - min) + min;
 }
