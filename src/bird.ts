@@ -5,7 +5,7 @@ export default class Bird {
 
   constructor(birdElement: HTMLDivElement) {
     this.birdElement = birdElement;
-    this.gravity = 1;
+    this.gravity = window.innerWidth < 480 ? 0.5 : 1;
     this.isJumping = false;
 
     document.addEventListener("mousedown", () => {
