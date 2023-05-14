@@ -28,6 +28,9 @@ export default class Obstacle {
     return this.obstacleElement.getBoundingClientRect();
   }
 
+  resetPosition() {
+    this.x = 100;
+  }
   reset() {
     this.x = 100;
     this.velocity = 0.5;

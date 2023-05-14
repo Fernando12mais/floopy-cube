@@ -69,8 +69,8 @@ function update() {
   }
 
   if (obstacle1.x <= 0) {
-    obstacle1.reset();
-    obstacle2.reset();
+    obstacle1.resetPosition();
+    obstacle2.resetPosition();
     setObstaclesHeights();
   }
 
