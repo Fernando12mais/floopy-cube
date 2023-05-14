@@ -8,10 +8,10 @@ export default class Bird {
     this.gravity = 1;
     this.isJumping = false;
 
-    document.addEventListener("mousedown", (e) => {
+    document.addEventListener("mousedown", () => {
       this.isJumping = true;
     });
-    document.addEventListener("mouseup", (e) => {
+    document.addEventListener("mouseup", () => {
       this.isJumping = false;
     });
 
